@@ -7,3 +7,14 @@
 .epiStringList .epiStringListError .dijitTextArea {
     border: solid 1px #d46464;
 }
+
+.epi-form-container.dijitLayoutContainer.dijitContainer {
+    width: auto !important;
+}
+.Sleek .epi-dialog-landscape .dijitDialogPaneContentArea {
+    height: auto !important;
+}
+
+.Sleek .epi-dialog-landscape, .Sleek .epi-dialog-portrait, .Sleek .epi-dialog--auto-height {
+    width: 900px !important; 
+}

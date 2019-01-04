@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
@@ -25,6 +26,9 @@ namespace Episerver.TinyMce.WysiwygTemplates.Models.Pages
             Order = 320)]
         [CultureSpecific]
         public virtual ContentArea MainContentArea { get; set; }
+
+        [Display(Name = "WYSIWYG Templates", GroupName = Global.GroupNames.SiteSettings, Order = 100)]
+        public virtual IList<TinyMceTemplateModel> WysiwygTemplates { get; set; }
 
         [Display(GroupName = Global.GroupNames.SiteSettings, Order = 300)]
         public virtual LinkItemCollection ProductPageLinks { get; set; }

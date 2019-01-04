@@ -26,6 +26,11 @@ namespace Episerver.TinyMce.WysiwygTemplates.Business.Initialization
                 config.Default()
                     .ContentCss("/static/css/editor.css");
 
+                config.Default()
+                    .AddPlugin("template")
+                    .AppendToolbar("| template")
+                    .AddSetting("templates", "/api/TinyMceTemplatesApi");
+
                 // This will clone the default settings object and extend it by
                 // limiting the block formats for the MainBody property of an ArticlePage.
                 config.For<ArticlePage>(t => t.MainBody)
